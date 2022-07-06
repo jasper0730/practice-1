@@ -1,0 +1,582 @@
+*
+	margin: 0
+	padding: 0
+	box-sizing: border-box
+a
+	text-decoration: none
+ul,
+li
+	list-style-type: none
+img
+	height: auto
+	max-width: 100%
+
+@font-face
+	font-family: 'JaguarJC-Book'
+	src: url('../fonts/JaguarJC/Book/JaguarJC-Book.woff')
+@font-face
+	font-family: 'JaguarJC-Bold'
+	src: url('../fonts/JaguarJC/Bold/JaguarJC-Bold.woff')
+@font-face
+	font-family: 'JaguarJC-Bookltalic'
+	src: url('../fonts/JaguarJC/Bookltalic/JaguarJC-Bookltalic.woff')
+@font-face
+	font-family: 'MyriadPro-Bold'
+	src: url('../fonts/MyriadPro/Bold/MYRIADPRO-BOLD.woff')
+@font-face
+	font-family: 'MyriadPro-Light'
+	src: url('../fonts/MyriadPro/Light/MYRIADPRO-LIGHT.woff')
+@font-face
+	font-family: 'MyriadPro-Regular'
+	src: url('../fonts/MyriadPro/Regular/MyriadPro-Regular.woff')
+@font-face
+	font-family: 'Roboto-Regular'
+	src: url('../fonts/Roboto/Roboto-Regular.woff')
+@font-face
+	font-family: 'SEGUIEMJ'
+	src: url('../fonts/SEGUIEMJ/SEGUIEMJ.woff')
+html
+	font-family: 'JaguarJC-Book', 'serif'
+p
+	line-height: 1.67
+.navbar
+	max-width: 100%
+	height: 62px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.left-side
+		display: flex
+		.logo
+			background-color: #374558
+			width: 100px
+			text-align: center
+			height: 62px
+			span
+				color: #fff
+				font-size: 23px
+				line-height: 62px
+		a
+			display: flex
+			justify-content: center
+			align-items: center
+			height: 62px
+			font-weight: bold
+			font-size: 14px
+			color: #000
+			text-align: center
+			&:hover
+				background-color: #ededed
+			.triangle
+				margin-left: 15px
+				display: inline-block
+				border-right: 5px solid transparent
+				border-left: 5px solid transparent
+				border-top: 5px solid #000
+		.find-hotel
+			width: 200px
+		.language
+			width: 100px
+	.right-side
+		height: 75px
+		display: flex
+		align-items: center
+		a
+			font-size: 15px
+			font-weight: bold
+			color: #000
+			padding-right: 60px
+		span
+			font-size: 20px
+			padding-right: 38px
+		.circle
+			margin-right: 40px
+			width: 35px
+			height: 35px
+			border-radius: 99em
+			background-color: #000
+			display: flex
+			justify-content: center
+			align-items: center
+			flex-direction: column
+			.inside
+				width: 100%
+				display: flex
+				height: 6px
+				justify-content: center
+				align-items: center
+				.square
+					width: 3px
+					height: 3px
+					margin: 2px
+					background-color: #fff
+.container
+	max-width: 1500px
+	margin: 0 auto
+	.breadcrumb
+		padding: 50px 0 35px 0
+		display: flex
+		align-items: center
+		span:first-child
+			display: flex
+			align-items: center
+			&::before
+				margin: 15px
+				content: ""
+				display: block
+				width: 10px
+				height: 10px
+				border-bottom: 1px solid #000
+				border-left: 1px solid #000
+				transform: rotate(45deg)
+			&::after
+				content: ""
+				margin: 0 20px
+				display: block
+				width: 1px
+				height: 15px
+				background-color: #b9b9b9
+		span:last-child
+			color: #666
+	.wrap
+		max-width: 100%
+		display: flex
+		.left-section
+			width: 50%
+			.product-img
+				position: relative
+				height: 645px
+				// background: url('../img/vase.jpg') no-repeat
+				// &::before
+				// 	display: block
+				// 	height: 645px
+				// 	content: ''
+				.icon-zoom
+					width: 50px
+					height: 50px
+					background-color: #fff
+					position: absolute
+					top: 	 170px
+					right: 110px
+					display: flex
+					justify-content: center
+					align-items: center
+					font-size: 20px
+					border-radius: 99em
+			.page
+				width: 675px
+				margin-top: 30px
+				display: flex
+				justify-content: center
+				align-items: center
+				font-size: 14px
+				p
+					display: flex
+					justify-content: center
+					align-items: center
+					&:after
+						content: ""
+						display: block
+						width: 60px
+						height: 1px
+						background-color: #000
+						margin: 0 15px
+				span
+					color: #666
+				.page-num
+					margin-left: 30px
+		.right-section
+			width: 50%
+			.info
+				max-width: 520px
+				margin: 0 auto
+				.info-favor
+					display: flex
+					justify-content: 	flex-end
+					align-items: center
+					font-size: 14px
+					margin-bottom: 70px
+					.icon-favorite-line
+						font-size: 18px
+						margin-right: 5px
+					.icon-share
+						margin-left: 30px
+				.info-content
+					margin: 0 17px
+					.category
+						color: #666
+						font-size: 18px
+					h1
+						font-weight: normal
+					.info-content-price
+						font-size: 22px
+						span
+							margin-left: 40px
+							font-size: 16px
+							text-decoration: line-through
+							color: #666
+					.info-cpntent-text
+						font-size: 15px
+						color: #666
+						margin-top: 25px
+					.info-member-price
+						font-size: 14px
+						margin: 30px 0 10px 0
+				.info-size
+					margin-top: 30px
+					padding: 30px 17px
+					border-top: 1px solid #000
+					border-bottom: 1px solid #000
+					.info-size-color
+						display: flex
+						img
+							border-radius: 99em
+							margin-right: 15px
+					.info-size-group
+						display: flex
+						div
+							width: 66px
+							height: 34px
+							background-color: #e4e4e4
+							display: flex
+							justify-content: center
+							align-items: center
+							margin: 20px 6px 0 0
+							&:hover
+								color: #fff
+								background-color: #000
+				.info-count
+					display: flex
+					align-items: center
+					margin: 40px 0 30px 0
+					p
+						margin-right: 15px
+					.info-count-group
+						display: flex
+						width: 120px
+						height: 40px
+						border: 1px solid #000
+						.count-num
+							border-left: 1px solid #000
+							border-right: 1px solid #000
+							width: 50%
+							display: flex
+							align-items: center
+							justify-content: center
+						.count-btn
+							width: 25%
+							display: flex
+							align-items: center
+							justify-content: center
+				.info-btn
+					display: flex
+					a
+						width: 50%
+						display: block
+						background-color: #374558
+						color: #fff
+						height: 45px
+						display: flex
+						align-items: center
+						justify-content: center
+						&:hover
+							background-color: #000
+				.info-more-accordion
+					margin-top: 10px
+					.promotions
+						color: #990000
+					.accrofion-group
+						padding: 0 10px 0 30px
+						border-bottom: 1px solid #000
+						height: 55px
+						display: flex
+						align-items: center
+						justify-content: space-between
+						div
+							position: relative
+							display: flex
+							.icon-tag
+								position: absolute
+								top: 0
+								left: -30px
+	.article
+		margin-top: 140px
+		.article-menu
+			border-top: 1px solid #000
+			border-bottom: 1px solid #000
+			height: 55px
+			display: flex
+			justify-content: center
+			align-items: center
+			color: #000
+			p
+				display: flex
+				align-items: center
+				&:not(:last-child)
+					&::after
+						content: ""
+						display: block
+						width: 4px
+						height: 4px
+						background-color: #999
+						border-radius: 99em
+						margin: 0 20px
+			// span
+		.intro
+			margin: 100px auto 0 auto
+			max-width: 1080px
+			.intro-header
+				text-align: center
+				h2
+					font-size: 32px
+					font-weight: normal
+				p
+					font-size: 15px
+			.intro-body
+				max-width: 1080px
+				margin: 0 auto
+				margin-top: 50px
+				display: flex
+				.intro-body-content
+					width: 50%
+					padding: 30px 30px 0 30px
+					h3
+						font-size: 22px
+						font-weight: normal
+					p
+						font-size: 15px
+			.intro-footer
+				font-size: 15px
+			.intro-poster
+				padding-top: 45px
+				.background-img
+					max-width: 1080px
+					height: 612px
+					background: url('../img/background1.jpg')
+					display: flex
+					justify-content: center
+					align-items: center
+					.txt-wrap
+						width: 800px
+						h3
+							font-size: 22px
+							font-weight: normal
+						.prefix
+							font-size: 18px
+						p:not(.prefix)
+							font-size: 15px
+						a
+							color: #fff
+							background-color: #000
+							display: block
+							width: 220px
+							height: 45px
+							text-align: center
+							line-height: 45px
+							font-size: 14px
+		.specification
+			display: flex
+			justify-content: center
+			align-items: center
+			margin-top: 100px
+			background-color: #ebebeb
+			width: 100%
+			height: 624px
+			.specification-wrap
+				text-align: center
+				width: 70%
+				h2
+					font-weight: normal
+					font-size: 32px
+				p
+					font-size: 15px
+				.list
+					margin-top: 50px
+					border-top: 4px solid #000
+					border-bottom: 4px solid #000
+					div
+						display: flex
+						padding: 30px 200px
+						&:not(:last-child)
+							border-bottom: 1px solid #666
+						p
+							// width: 30%
+							font-size: 18px
+							text-align: left
+							// padding: 0 10%
+							// padding: 30px 10%
+							&.title
+								margin-right: 180px
+								width: 120px
+.carousel
+	padding: 100px 0 150px 0
+	position: relative
+	.prev
+		display: flex
+		align-items: center
+		position: absolute
+		top: 50%
+		font-size: 10px
+		&::before
+			margin-right: 10px
+			content: ""
+			display: block
+			width: 100px
+			height: 1px
+			background-color: #000
+	.next
+		position: absolute
+		top: 50%
+		right: 0
+		display: flex
+		align-items: center
+		font-size: 10px
+		&::after
+			margin-left: 10px
+			content: ""
+			display: block
+			width: 100px
+			height: 1px
+			background-color: #000
+	.title
+		text-align: center
+		h2
+			font-size: 32px
+			font-weight: normal
+		p
+			font-size: 15px
+	.row
+		display: flex
+		justify-content: center
+		.col
+			line-height: 2
+			text-align: center
+			p
+				font-size: 14px
+				color: #666
+			h4
+				font-size: 26px
+				font-weight: normal
+			.price-block
+				display: flex
+				justify-content: center
+				align-items: center
+				.price
+					display: flex
+					align-items: center
+					&::after
+						content: ""
+						display: block
+						width: 1px
+						height: 15px
+						background-color: #bebebe
+						margin: 0 15px
+					.icon-tag
+						margin-right: 10px
+						font-size: 14px
+						span
+							font-size: 14px
+				.icon-cart
+					font-size: 16px
+.footer
+	height: 570px
+	background-color: #2b2c2c
+	position: relative
+	.menu
+		padding: 200px 0 50px 0
+		ul
+			display: flex
+			justify-content: center
+			li
+				a
+					color: #fff
+					font-size: 22px
+			li:not(:first-child)
+				padding-left: 90px
+	.others
+		padding-bottom: 90px
+		ul
+			display: flex
+			justify-content: center
+			li
+				display: flex
+				align-items: center
+				&:not(:last-child)::after
+					margin: 0 40px
+					content: ""
+					display: block
+					width: 1px
+					height: 14px
+					background-color: rgba(255, 255, 255, 0.2)
+				a
+					color: #fff
+					font-size: 10px
+	.bottom
+		display: flex
+		justify-content: space-evenly
+		color: rgba(255, 255, 255, 0.5)
+		.icon-block
+			.link
+				padding-bottom: 25px
+				ul
+					display: flex
+					li
+						display: flex
+						font-size: 15px
+						&:not(:last-child)::after
+							margin: 0 15px
+							content: ""
+							display: block
+							width: 1px
+							height: 15px
+							background-color: #808080
+						a
+							color: #808080
+			.icon
+				display: flex
+				justify-content: center
+				color: #fff
+				a
+					color: #fff
+					&:not(last-child)
+						padding-right: 25px
+		.contact
+			width: 550px
+			display: flex
+			justify-content: space-between
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2)
+			padding: 0 10px
+			align-items: center
+			color: rgba(255, 255, 255, 0.2)
+			p
+				font-size: 18px
+			a
+				color: #fff
+				font-size: 14px
+		.copyright
+			width: 300px
+			font-size: 13px
+			position: relative
+			div
+				position: absolute
+				bottom: 0
+				p
+					display: flex
+					justify-content: flex-end
+	.top-scroll
+		position: absolute
+		top: -26px
+		left: 50%
+		div
+			width: 50px
+			text-align: center
+			span::before
+				margin-left: 50%
+				content: ""
+				display: block
+				width: 1px
+				height: 100px
+				background-color: #808080
+				text-align: center
+			p
+				color: #808080
