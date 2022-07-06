@@ -16,7 +16,7 @@ li {
 
 img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 @font-face {
@@ -233,7 +233,6 @@ p {
 }
 .container .wrap .left-section .product-img {
   position: relative;
-  height: 645px;
 }
 .container .wrap .left-section .product-img .icon-zoom {
   width: 50px;
@@ -463,6 +462,19 @@ p {
 .container .wrap .right-section .info .info-more-accordion .promotions {
   color: #990000;
 }
+.container .wrap .right-section .info .info-more-accordion .promotions div {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.container .wrap .right-section .info .info-more-accordion .promotions div .icon-tag {
+  position: absolute;
+  left: -30px;
+}
 .container .wrap .right-section .info .info-more-accordion .accrofion-group {
   padding: 0 10px 0 30px;
   border-bottom: 1px solid #000;
@@ -476,17 +488,6 @@ p {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.container .wrap .right-section .info .info-more-accordion .accrofion-group div {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.container .wrap .right-section .info .info-more-accordion .accrofion-group div .icon-tag {
-  position: absolute;
-  top: 0;
-  left: -30px;
 }
 .container .article {
   margin-top: 140px;
