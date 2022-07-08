@@ -5,15 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <LINK rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"></LINK>
     <link rel="stylesheet" href="../icomoon/style.css">
     <link rel="stylesheet" href="../dist/all.css">
   </head>
   <body> 
     <div class="navbar">
-      <div class="left-side">
-        <div class="logo"><span class="icon-logo"></span></div><a class="find-hotel" href="#">Find A Hotel<span class="triangle"></span></a><a class="language" href="#">English<span class="triangle"></span></a>
+      <div class="select">
+        <div class="logo"><span class="icon-logo"></span></div><a class="find-hotel" href="javascript:;">Find A Hotel<span class="triangle"></span></a><a class="language" href="javascript:;">English<span class="triangle"></span></a>
       </div>
-      <div class="right-side"> <a href="#">STORY </a><a href="#">EXPERIENCE</a><span class="icon-member"></span><span class="icon-cart"></span><span class="icon-search"></span>
+      <div class="menu"><a href="javascript:;">STORY </a><a href="javascript:;">EXPERIENCE</a><span class="icon-member"></span><span class="icon-cart"></span><span class="icon-search"></span>
+        <div class="circle">
+          <div class="inside">
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="inside">
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hamburger">
         <div class="circle">
           <div class="inside">
             <div class="square"></div>
@@ -28,69 +41,93 @@
     </div>
     <div class="container"> <a class="breadcrumb"> <span>Back</span><span>New Arrival</span></a>
       <div class="wrap"> 
-        <div class="left-section">
-          <div class="product-img"><img src="../img/vase.jpg" alt="">
-            <div class="icon-zoom"></div>
-          </div>
-          <div class="page">
-            <p>PREV</p><span>NEXT</span><span class="page-num">0 / 6</span>
-          </div>
+        <div class="photo">
+          <div class="product-img"><img src="../img/vase.jpg" alt=""></div>
+          <div class="page"><span>PREV</span><span>NEXT</span><span class="page-num">0 / 6</span></div>
         </div>
-        <div class="right-section">
-          <div class="info">
-            <div class="info-favor"><span class="icon-favorite-line"><span class="path1"></span><span class="path2"></span></span><span>Wishlist </span><span class="icon-share"></span></div>
-            <div class="info-content"><span class="category">Landcape series</span>
+        <div class="info">
+          <div class="info-block">
+            <div class="favor"><span class="icon-favorite-line"><span class="path1"></span><span class="path2"></span></span><span>Wishlist </span><span class="icon-share"></span></div>
+            <div class="content"><span class="category">Landcape series</span>
               <h1>The Wizard of Oz </h1>
               <p class="info-cpntent-text">Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi </p>
               <p class="info-member-price">Member price</p>
               <p class="info-content-price">NT $44,900<span>NT $45,900</span></p>
             </div>
-            <div class="info-size"> 
-              <div class="info-size-color"> <img src="../img/color-green.jpg" alt=""><img src="../img/color-blue.jpg" alt=""><img src="../img/color-purple.jpg" alt=""><img src="../img/color-red.jpg" alt=""></div>
-              <div class="info-size-group"> 
-                <div>S</div>
+            <div class="color-size"> 
+              <div class="color"> 
+                <div><img class="active" src="../img/color-green.jpg" alt=""></div>
+                <div><img src="../img/color-blue.jpg" alt=""></div>
+                <div><img src="../img/color-purple.jpg" alt=""></div>
+                <div><img src="../img/color-red.jpg" alt=""></div>
+              </div>
+              <div class="size">
+                <div class="active">S</div>
                 <div>M</div>
                 <div>L</div>
                 <div>XL</div>
               </div>
             </div>
-            <div class="info-count"> 
+            <div class="count-block"> 
               <p>Quantity</p>
-              <div class="info-count-group">
-                <div class="count-btn">
+              <div class="count">
+                <div class="btn">
                   <div class="icon-less"></div>
                 </div>
-                <div class="count-num">1</div>
-                <div class="count-btn">
+                <div class="num">1</div>
+                <div class="btn">
                   <div class="icon-plus"></div>
                 </div>
               </div>
             </div>
-            <div class="info-btn"> <a href="#">Gift Service</a><a href="#">ADD TO CART</a></div>
-            <div class="info-more-accordion">
-              <div class="accrofion-group promotions">
-                <div> 
-                  <div class="icon-tag"></div>
-                  <p>Promotions </p>
+            <div class="info-btn"> <a href="javascript:;">Gift Service</a><a href="javascript:;">ADD TO CART</a></div>
+            <div class="accordion-block">
+              <div class="accordion promotions">
+                <div class="title">
+                  <div> 
+                    <div class="icon-tag"></div>
+                    <p>Promotions </p>
+                  </div>
+                  <div>
+                    <div class="icon-cross"></div>
+                  </div>
                 </div>
-                <div>
-                  <div class="icon-cross"></div>
-                </div>
-              </div>
-              <div class="accrofion-group"> 
-                <div> 
-                  <p>Delivary Restrictions </p>
-                </div>
-                <div>
-                  <div class="icon-cross"></div>
+                <div class="collapse"> 
+                  <p>Free shipping for orders over NT $3000</p><a href="javascript:;"> </a>
                 </div>
               </div>
-              <div class="accrofion-group">
-                <div> 
-                  <p>Precautions</p>
+              <div class="accordion">
+                <div class="title">
+                  <div> 
+                    <p>Delivary Restrictions </p>
+                  </div>
+                  <div>
+                    <div class="icon-cross"></div>
+                  </div>
                 </div>
-                <div>
-                  <div class="icon-cross"></div>
+                <div class="collapse"> 
+                  <p>At this stage, we are unable to ship the products to the followingcountries: New Zealand, Romania, South Africa, Sri Lanka, Turkey, Turks and Caicos Islands. For individual guidance on where the fragrances ship to, please email our Customer Care team:</p>
+                  <p>service@thelalu.com</p>
+                </div>
+              </div>
+              <div class="accordion">
+                <div class="title">
+                  <div> 
+                    <p>Precautions</p>
+                  </div>
+                  <div>
+                    <div class="icon-cross"></div>
+                  </div>
+                </div>
+                <div class="collapse"> 
+                  <ul> 
+                    <li>
+                      <p>This product is purely handmade and retains the texture of the hand. Those who accept it can place an order.</p>
+                    </li>
+                    <li> 
+                      <p>Some products may have a slight drop due to the firingprocess, environment and other factors, which is normal.</p>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -98,40 +135,40 @@
         </div>
       </div>
       <div class="article">
-        <div class="article-menu">
+        <div class="menu">
           <p> Introduction  </p>
           <p> Specification </p>
           <p>Related Products</p>
         </div>
         <div class="intro"> 
-          <div class="intro-header">
+          <div class="title">
             <h2>Introduction</h2>
             <p>Lorem ipsum dolor sit amet.</p>
           </div>
-          <div class="intro-body"><img src="../img/intro-img.jpg" alt="">
-            <div class="intro-body-content">
+          <div class="content"><img src="../img/intro-img.jpg" alt="">
+            <div class="txt">
               <h3>Create a beautiful in your house </h3><br>
               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse magni sint nam reprehenderit aut accusantium, quisquam eius veritatis? Nam ullam quibusdam veritatis necessitatibus quos fugit obcaecati nesciunt et assumenda repellendus!</p><br>
-              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae est, nemo quaerat sint dolor, distinctio similique quos quod eligendi cum non quibusdam tempora laudantium laborum sequi molestiae iusto? Tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laudantium culpa eos quo amet laboriosam tenetur sit molestiae sequi. Neque. Lorem, ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, sapiente.</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae est, nemo quaerat sint dolor, distinctio similique quos quod eligendi cum non quibusdam tempora laudantium laborum sequi molestiae iusto? Tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laudantium </p>
             </div>
           </div>
-          <div class="intro-footer"> <br>
+          <div class="txt-footer"><br>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloremque voluptate vel quod? Corrupti quibusdam magnam iure voluptatum consectetur rerum hic atque ducimus sunt eum a enim tempora fugiat saepe est facilis suscipit, nam minima nulla quidem repudiandae necessitatibus commodi laboriosam modi! Similique earum laborum vitae tempora error officiis, consequatur, fuga expedita, voluptatum sequi mollitia iure doloribus iste aut praesentium quaerat impedit. Et pariatur eaque omnis, numquam consectetur, nemo odio esse atque mollitia cumque dolorem asperiores eos cum dolores. A delectus tenetur ad repellat eligendi sapiente nesciunt odit! Rerum quod.</p><br>
             <p>lorem sit amet consectetur adipisicing elit. Fuga labore distinctio nam tenetur ad, libero officiis vitae nesciunt blanditiis autem enim, dicta ratione, quasi mollitia nisi aut ipsa atque voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, temporibus.</p>
           </div>
-          <div class="intro-poster">
-            <div class="background-img">
+          <div class="poster">
+            <div class="background-pic">
               <div class="txt-wrap">
                 <h3>Life style creation </h3><br>
                 <p class="prefix">Sense of Ritual</p>
                 <p>Lorem ipsum dolor sit amet consectetur, 	adipisicing elit. Earum repudiandae 	laboriosam quibusdam repellendus cumque 	aliquid quo ipsa totam, enim culpa?</p><br>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, reiciendis. Cumque dolores, quo molestiae delectus tempore, voluptas aspernatur veritatis dignissimos itaque rem nemo nobis. Voluptates tenetur mollitia expedita quas dolorem!</p><br><a href="#">Find more </a>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, reiciendis. Cumque dolores, quo molestiae delectus tempore, voluptas aspernatur veritatis dignissimos itaque rem nemo nobis. Voluptates tenetur mollitia expedita quas dolorem!</p><br><a href="javascript:;">Find more </a>
               </div>
             </div>
           </div>
         </div>
         <div class="specification">
-          <div class="specification-wrap">
+          <div class="content">
             <h2>Specification</h2>
             <p>Lorem ipsum dolor sit amet.</p>
             <div class="list">
@@ -156,89 +193,87 @@
         </div>
       </div>
     </div>
-    <div class="carousel">
-      <div class="prev">PREV</div>
-      <div class="next">NEXT</div>
-      <div class="title"> 
-        <h2>You may also like</h2>
-        <p>Related products </p>
-      </div>
-      <div class="row"> 
-        <div class="col"> <img src="../img/pic1.jpg" alt="">
-          <p>Home Essentials </p>
-          <h4 class="info">Rose Salt Lamp</h4>
-          <div class="price-block"> 
-            <div class="price">
-              <div class="icon-tag"></div><span>NT: 29,500</span>
+    <div class="carousel"> 
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="../img/pic1.jpg" alt="">
+            <p>Home Essentials </p>
+            <h4 class="info">Rose Salt Lamp</h4>
+            <div class="price-block"> 
+              <div class="icon-tag"></div>
+              <div class="price"><span>NT 29,500</span></div>
+              <div class="icon-cart"></div>
             </div>
-            <div class="icon-cart"></div>
           </div>
-        </div>
-        <div class="col"> <img src="../img/pic2.jpg" alt="">
-          <p>Home Essentials </p>
-          <h4 class="info">Zebra Puzzle Clocl</h4>
-          <div class="price-block"> 
-            <div class="price">
-              <div class="icon-tag"></div><span>NT: 29,500</span>
+          <div class="swiper-slide"><img src="../img/pic2.jpg" alt="">
+            <p>Home Essentials </p>
+            <h4 class="info">Rose Salt Lamp</h4>
+            <div class="price-block"> 
+              <div class="icon-tag"></div>
+              <div class="price"><span>NT 45,900</span><span>NT 24,500</span></div>
+              <div class="icon-cart"></div>
             </div>
-            <div class="icon-cart"></div>
           </div>
-        </div>
-        <div class="col"> <img src="../img/pic3.jpg" alt="">
-          <p>Home Essentials </p>
-          <h4 class="info">Tea Ceremony</h4>
-          <div class="price-block"> 
-            <div class="price">
-              <div class="icon-tag"></div><span>NT: 29,500</span>
+          <div class="swiper-slide"><img src="../img/pic3.jpg" alt="">
+            <p>Home Essentials </p>
+            <h4 class="info">Rose Salt Lamp</h4>
+            <div class="price-block"> 
+              <div class="icon-tag"></div>
+              <div class="price"><span>NT 45,900</span><span>NT: 29,500</span></div>
+              <div class="icon-cart"></div>
             </div>
-            <div class="icon-cart"></div>
           </div>
-        </div>
-        <div class="col"> <img src="../img/pic4.jpg" alt="">
-          <p>Home Essentials </p>
-          <h4 class="info">Hand Coffee Maker</h4>
-          <div class="price-block"> 
-            <div class="price">
-              <div class="icon-tag"></div><span>NT: 29,500</span>
+          <div class="swiper-slide"><img src="../img/pic4.jpg" alt="">
+            <p>Home Essentials </p>
+            <h4 class="info">Rose Salt Lamp</h4>
+            <div class="price-block"> 
+              <div class="icon-tag"></div>
+              <div class="price"><span>NT: 29,500</span></div>
+              <div class="icon-cart"></div>
             </div>
-            <div class="icon-cart"></div>
           </div>
         </div>
       </div>
-    </div>
+      <div class="swiper-button-next"><span></span>
+        <p>next</p>
+      </div>
+      <div class="swiper-button-prev"><span></span>
+        <p>prev</p>
+      </div>
+    </div></div>
     <div class="footer">
       <div class="menu"> 
         <ul> 
-          <li><a href="#">EXERIENCE  </a></li>
-          <li><a href="#">BOOKING  </a></li>
-          <li><a href="#">SHOPPING  </a></li>
-          <li><a href="#">VIP  </a></li>
-          <li><a href="#">CONTACT  </a></li>
-          <li><a href="#">FAQ  </a></li>
+          <li><a href="javascript:;">EXERIENCE  </a></li>
+          <li><a href="javascript:;">BOOKING  </a></li>
+          <li><a href="javascript:;">SHOPPING  </a></li>
+          <li><a href="javascript:;">VIP  </a></li>
+          <li><a href="javascript:;">CONTACT  </a></li>
+          <li><a href="javascript:;">FAQ  </a></li>
         </ul>
       </div>
       <div class="others">
         <ul> 
-          <li> <a href="#">Gift Card </a></li>
-          <li> <a href="#">VIP Service</a></li>
-          <li> <a href="#">Shopping Service </a></li>
-          <li> <a href="#">Payment Options</a></li>
-          <li> <a href="#">Returns & Exchanges</a></li>
+          <li> <a href="javascript:;">Gift Card </a></li>
+          <li> <a href="javascript:;">VIP Service</a></li>
+          <li> <a href="javascript:;">Shopping Service </a></li>
+          <li> <a href="javascript:;">Payment Options</a></li>
+          <li> <a href="javascript:;">Returns & Exchanges</a></li>
         </ul>
       </div>
       <div class="bottom">
         <div class="icon-block"> 
           <div class="link">
             <ul> 
-              <li> <a href="#">Copyright </a></li>
-              <li> <a href="#">Privacy Policy</a></li>
-              <li> <a href="#">Production</a></li>
+              <li> <a href="javascript:;">Copyright </a></li>
+              <li> <a href="javascript:;">Privacy Policy</a></li>
+              <li> <a href="javascript:;">Production</a></li>
             </ul>
           </div>
-          <div class="icon"><a class="icon-wechat" href="#"></a><a class="icon-line" href="#"> </a><a class="icon-youtube-square" href="#"></a><a class="icon-facebook" href="#"></a><a class="icon-instagram" href="#"></a><a class="icon-twitter" href="#"> </a></div>
+          <div class="icon"><a class="icon-wechat" href="javascript:;"></a><a class="icon-line" href="javascript:;"> </a><a class="icon-youtube-dark" href="javascript:;"></a><a class="icon-facebook" href="javascript:;"></a><a class="icon-instagram" href="javascript:;"></a><a class="icon-twitter" href="javascript:;"> </a></div>
         </div>
         <div class="contact">
-          <p>Email assress...</p><a href="#">SUBSCRIBE</a>
+          <p>Email assress...</p><a href="javascript:;">SUBSCRIBE</a>
         </div>
         <div class="copyright">
           <div>
@@ -254,4 +289,7 @@
       </div>
     </div>
   </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+  <script src="../dist/index.js"></script>
 </html>

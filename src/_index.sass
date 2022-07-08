@@ -9,8 +9,7 @@ li
 	list-style-type: none
 img
 	height: auto
-	width: 100%
-
+	max-width: 100%
 @font-face
 	font-family: 'JaguarJC-Book'
 	src: url('../fonts/JaguarJC/Book/JaguarJC-Book.woff')
@@ -39,13 +38,19 @@ html
 	font-family: 'JaguarJC-Book', 'serif'
 p
 	line-height: 1.67
+
 .navbar
-	max-width: 100%
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
 	height: 62px
 	display: flex
 	justify-content: space-between
 	align-items: center
-	.left-side
+	z-index: 20
+	background-color: #fff
+	.select
 		display: flex
 		.logo
 			background-color: #374558
@@ -65,6 +70,7 @@ p
 			font-size: 14px
 			color: #000
 			text-align: center
+			padding: 0 49px
 			&:hover
 				background-color: #ededed
 			.triangle
@@ -73,24 +79,21 @@ p
 				border-right: 5px solid transparent
 				border-left: 5px solid transparent
 				border-top: 5px solid #000
-		.find-hotel
-			width: 200px
-		.language
-			width: 100px
-	.right-side
-		height: 75px
+	.menu
+		padding-right: 40px
 		display: flex
 		align-items: center
 		a
 			font-size: 15px
-			font-weight: bold
 			color: #000
 			padding-right: 60px
 		span
 			font-size: 20px
 			padding-right: 38px
+			cursor: pointer
 		.circle
-			margin-right: 40px
+			// margin-right: 40px
+			cursor: pointer
 			width: 35px
 			height: 35px
 			border-radius: 99em
@@ -110,13 +113,59 @@ p
 					height: 3px
 					margin: 2px
 					background-color: #fff
+	.hamburger
+		display: none
+@media (max-width:1200px)
+	.navbar
+		.select
+			a
+				padding: 0 20px
+		.menu
+			a,span
+				padding-right: 20px
+@media (max-width:767px)
+	.navbar
+		.menu
+			display: none
+		.hamburger
+			display: block
+			padding-right: 40px
+			.circle
+				cursor: pointer
+				width: 35px
+				height: 35px
+				border-radius: 99em
+				background-color: #fff
+				display: flex
+				justify-content: center
+				align-items: center
+				flex-direction: column
+				.inside
+					width: 100%
+					display: flex
+					height: 6px
+					justify-content: center
+					align-items: center
+					.square
+						width: 3px
+						height: 3px
+						margin: 2px
+						background-color: #000
+@media (max-width:375px)
+	.navbar
+		.select
+			.language
+				display: none
 .container
 	max-width: 1500px
+	width: calc( 100% - 50px )
 	margin: 0 auto
 	.breadcrumb
-		padding: 50px 0 35px 0
+		padding: 112px 0 35px 0
 		display: flex
 		align-items: center
+		span
+			cursor: pointer
 		span:first-child
 			display: flex
 			align-items: center
@@ -141,61 +190,68 @@ p
 	.wrap
 		max-width: 100%
 		display: flex
-		.left-section
-			width: 50%
+		.photo
+			padding-right: 30px
+			width: 48%
 			.product-img
 				position: relative
-				.icon-zoom
-					width: 50px
-					height: 50px
-					background-color: #fff
+				&::after
+					content: ""
+					display: block
+					width: 100%
+					height: 0
+					padding-bottom: 95.55%
+				img
 					position: absolute
-					top: 	 170px
-					right: 110px
-					display: flex
-					justify-content: center
-					align-items: center
-					font-size: 20px
-					border-radius: 99em
+					top: 50%
+					left: 50%
+					transform: translate(-50%, -50%)
+					width: 100%
+					height: 100%
+					object-fit: cover
 			.page
-				width: 675px
+				max-width: 675px
 				margin-top: 30px
 				display: flex
 				justify-content: center
 				align-items: center
 				font-size: 14px
-				p
+				span
+					color: #000
 					display: flex
 					justify-content: center
 					align-items: center
-					&:after
+					&:first-child::after
 						content: ""
 						display: block
 						width: 60px
 						height: 1px
-						background-color: #000
+						background-color: #666
 						margin: 0 15px
-				span
-					color: #666
+					&:not(.page-num)
+						cursor: pointer
 				.page-num
 					margin-left: 30px
-		.right-section
-			width: 50%
-			.info
+					color: #666
+		.info
+			width: 52%
+			.info-block
 				max-width: 520px
 				margin: 0 auto
-				.info-favor
+				.favor
 					display: flex
 					justify-content: 	flex-end
 					align-items: center
 					font-size: 14px
 					margin-bottom: 70px
 					.icon-favorite-line
+						cursor: pointer
 						font-size: 18px
 						margin-right: 5px
 					.icon-share
+						cursor: pointer
 						margin-left: 30px
-				.info-content
+				.content
 					margin: 0 17px
 					.category
 						color: #666
@@ -216,19 +272,34 @@ p
 					.info-member-price
 						font-size: 14px
 						margin: 30px 0 10px 0
-				.info-size
+				.color-size
 					margin-top: 30px
 					padding: 30px 17px
 					border-top: 1px solid #000
 					border-bottom: 1px solid #000
-					.info-size-color
+					.color
 						display: flex
-						img
-							border-radius: 99em
-							margin-right: 15px
-					.info-size-group
-						display: flex
+						align-items: center
 						div
+							padding-right: 16px
+							img
+								cursor: pointer
+								border-radius: 99em
+								&:hover
+									border: 1px solid #000
+									padding: 3px
+									border-radius: 99em
+							.active
+								border: 1px solid #000
+								padding: 3px
+								border-radius: 99em
+					.size
+						display: flex
+						.active
+							color: #fff
+							background-color: #000 !important
+						div
+							cursor: pointer
 							width: 66px
 							height: 34px
 							background-color: #e4e4e4
@@ -239,31 +310,33 @@ p
 							&:hover
 								color: #fff
 								background-color: #000
-				.info-count
+				.count-block
 					display: flex
 					align-items: center
 					margin: 40px 0 30px 0
 					p
 						margin-right: 15px
-					.info-count-group
+					.count
 						display: flex
 						width: 120px
 						height: 40px
 						border: 1px solid #000
-						.count-num
+						.num
 							border-left: 1px solid #000
 							border-right: 1px solid #000
 							width: 50%
 							display: flex
 							align-items: center
 							justify-content: center
-						.count-btn
+						.btn
+							cursor: pointer
 							width: 25%
 							display: flex
 							align-items: center
 							justify-content: center
 				.info-btn
 					display: flex
+					padding-bottom: 30px
 					a
 						width: 50%
 						display: block
@@ -275,27 +348,33 @@ p
 						justify-content: center
 						&:hover
 							background-color: #000
-				.info-more-accordion
-					margin-top: 10px
-					.promotions
-						color: #990000
-						div
-							position: relative
-							display: flex
-							align-items: center
-							.icon-tag
-								position: absolute
-								left: -30px
-					.accrofion-group
+				.accordion-block
+					.accordion
 						padding: 0 10px 0 30px
 						border-bottom: 1px solid #000
-						height: 55px
-						display: flex
-						align-items: center
-						justify-content: space-between		
+						.title
+							padding: 20px 0
+							display: flex
+							align-items: center
+							justify-content: space-between
+							div
+								display: flex
+								align-items: center
+						.collapse
+							display: none
+							padding-bottom: 30px
+					.promotions
+						color: #990000
+						.title
+							div
+								position: relative
+								.icon-tag
+									position: absolute
+									left: -30px
 	.article
+		width: 100%
 		margin-top: 140px
-		.article-menu
+		.menu
 			border-top: 1px solid #000
 			border-bottom: 1px solid #000
 			height: 55px
@@ -304,6 +383,7 @@ p
 			align-items: center
 			color: #000
 			p
+				cursor: pointer
 				display: flex
 				align-items: center
 				&:not(:last-child)
@@ -315,23 +395,22 @@ p
 						background-color: #999
 						border-radius: 99em
 						margin: 0 20px
-			// span
 		.intro
 			margin: 100px auto 0 auto
 			max-width: 1080px
-			.intro-header
+			.title
 				text-align: center
 				h2
 					font-size: 32px
 					font-weight: normal
 				p
 					font-size: 15px
-			.intro-body
-				max-width: 1080px
+			.content
 				margin: 0 auto
 				margin-top: 50px
 				display: flex
-				.intro-body-content
+				align-items: start
+				.txt
 					width: 50%
 					padding: 30px 30px 0 30px
 					h3
@@ -339,11 +418,11 @@ p
 						font-weight: normal
 					p
 						font-size: 15px
-			.intro-footer
+			.txt-footer
 				font-size: 15px
-			.intro-poster
+			.poster
 				padding-top: 45px
-				.background-img
+				.background-pic
 					max-width: 1080px
 					height: 612px
 					background: url('../img/background1.jpg')
@@ -352,6 +431,7 @@ p
 					align-items: center
 					.txt-wrap
 						width: 800px
+						padding: 0 30px
 						h3
 							font-size: 22px
 							font-weight: normal
@@ -375,8 +455,8 @@ p
 			margin-top: 100px
 			background-color: #ebebeb
 			width: 100%
-			height: 624px
-			.specification-wrap
+			padding: 100px 0
+			.content
 				text-align: center
 				width: 70%
 				h2
@@ -390,18 +470,75 @@ p
 					border-bottom: 4px solid #000
 					div
 						display: flex
-						padding: 30px 200px
+						// padding: 30px 200px
+						padding: 30px 20%
 						&:not(:last-child)
 							border-bottom: 1px solid #666
 						p
-							// width: 30%
 							font-size: 18px
 							text-align: left
-							// padding: 0 10%
-							// padding: 30px 10%
 							&.title
 								margin-right: 180px
 								width: 120px
+@media (max-width:1200px)
+	.container
+		.wrap
+			align-items: center
+			.photo
+				width: 100%
+				text-align: center
+				.page
+					padding-top: 30px
+					margin: 0 auto
+			.info
+				width: 100%
+				padding-top: 50px
+				.info-block
+					.favor
+						margin-bottom: 20px
+		.article
+			.intro
+				margin-top: 50px
+				.content
+					display: block
+					img
+						width: 100%
+					.txt
+						width: 100%
+						padding: 30px 0 0 0
+				.poster
+					.background-pic
+						height: auto
+						padding: 30px 0
+			.specification
+				.content
+					.list
+						div
+							padding: 30px 2%
+@media (max-width:767px)
+	.container
+		.wrap
+			display: block
+			.photo
+				padding-right: 0
+		.article
+			margin-top: 70px
+			.specification
+				.content
+					.list
+						div
+							display: block
+							padding: 10px 2%
+@media (max-width:375px)
+	.container
+		.article
+			margin-top: 50px
+			.specification
+				margin-top: 50px
+				padding: 30px 0
+				.content
+					.list
+						margin-top: 10px
 .carousel
 	padding: 100px 0 150px 0
 	position: relative
@@ -472,10 +609,76 @@ p
 							font-size: 14px
 				.icon-cart
 					font-size: 16px
+.carousel
+	position: relative
+	padding: 100px 60px 150px
+	.swiper
+		margin: 0 auto
+		max-width: 1365px
+		width: 100%
+		.swiper-wrapper
+			.swiper-slide
+				text-align: center
+				p
+					font-size: 14px
+					line-height: 28px
+					color: #666
+				h4
+					font-size: 26px
+					font-weight: normal
+				.price-block
+					display: flex
+					justify-content: center
+					line-height: 40px
+					align-items: baseline
+					.price
+						display: flex
+						align-items: center
+						.icon-tag
+							font-size: 14px
+						span
+							padding-left: 10px
+							font-size: 14px
+							display: flex
+							align-items: center
+							&:first-child
+								text-decoration: line-through
+								color: #666
+							&:last-child::after
+								content: ""
+								display: block
+								width: 1px
+								height: 15px
+								background-color: #111218
+								margin: 0 20px
+								opacity: 0.5
+					.icon-cart
+						cursor: pointer
+
+	.swiper-button-next,
+	.swiper-button-prev
+		display: flex
+		align-items: center
+		width: auto
+		height: auto
+		margin: 0
+		color: #000
+		&::after
+			content: none
+		span
+			display: block
+			background-color: rgba(#2f3030, 0.3)
+			width: 100px
+			height: 1px
+		p
+			margin: 0 10px
+	.swiper-button-next
+		span
+			order: 1
 .footer
-	height: 570px
 	background-color: #2b2c2c
 	position: relative
+	padding-bottom: 125px
 	.menu
 		padding: 200px 0 50px 0
 		ul
@@ -508,6 +711,7 @@ p
 	.bottom
 		display: flex
 		justify-content: space-evenly
+		align-items: flex-end
 		color: rgba(255, 255, 255, 0.5)
 		.icon-block
 			.link
@@ -529,13 +733,14 @@ p
 			.icon
 				display: flex
 				justify-content: center
-				color: #fff
 				a
-					color: #fff
+					color: #808080
 					&:not(last-child)
 						padding-right: 25px
+					&:hover
+						color: #fff
 		.contact
-			width: 550px
+			width: 30%
 			display: flex
 			justify-content: space-between
 			border-bottom: 1px solid rgba(255, 255, 255, 0.2)
@@ -545,15 +750,14 @@ p
 			p
 				font-size: 18px
 			a
-				color: #fff
+				color: #808080
 				font-size: 14px
+				&:hover
+					color: #fff
 		.copyright
 			width: 300px
 			font-size: 13px
-			position: relative
 			div
-				position: absolute
-				bottom: 0
 				p
 					display: flex
 					justify-content: flex-end
@@ -561,6 +765,7 @@ p
 		position: absolute
 		top: -26px
 		left: 50%
+		transform: translate(-50%, 0)
 		div
 			width: 50px
 			text-align: center
@@ -574,3 +779,72 @@ p
 				text-align: center
 			p
 				color: #808080
+				cursor: pointer
+@media (max-width:1200px)
+	.footer
+		.menu
+			ul
+				li:not(:first-child)
+					padding-left: 20px
+		.bottom
+			padding: 0 30px
+			.contact
+				margin: 0 20px
+@media (max-width:992px)
+	.footer
+		.bottom
+			display: block
+			.icon-block
+				margin-bottom: 30px
+				.link
+					display: flex
+					justify-content: center
+			.contact
+				margin: 0 auto 30px auto
+				width: 70%
+			.copyright
+				margin: 0 auto
+				div
+					p
+						justify-content: center
+@media (max-width:767px)
+	.footer
+		.menu
+			border-bottom: 1px solid #666
+			padding: 130px 0 30px 0
+			margin: 0 30px
+			ul
+				flex-wrap: wrap
+				// text-align: center
+				// display: block
+				li
+					width: 50%
+					margin-bottom: 30px
+					&:not(:first-child)
+						padding-left: 0
+					a
+						font-size: 16px
+		.others
+			border-bottom: 1px solid #666
+			padding: 50px	0
+			margin: 0 30px
+			ul
+				justify-content: flex-start
+				flex-wrap: wrap
+				li
+					width: 50%
+					a
+						font-size: 16px
+					&:not(:last-child)
+						padding-bottom: 30px
+					&:not(:last-child)::after
+						display: none
+		.bottom
+			display: block
+			.icon-block
+				margin-bottom: 30px
+				padding-top: 50px
+@media (max-width:375px)
+	.footer
+		padding-bottom: 50px
+		margin-top: 50px

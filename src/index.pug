@@ -5,23 +5,33 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible" content="IE=edge")
 		meta(name="viewport" content="width=device-width, initial-scale=1.0")
 		title Document
+		LINK(rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css")
 		link(rel="stylesheet" href="../icomoon/style.css")
 		link(rel="stylesheet" href="../dist/all.css")
+
 	body 
 		.navbar
-			.left-side
+			.select
 				.logo
 					span.icon-logo
-				a(class="find-hotel" href="#") Find A Hotel
+				a(class="find-hotel" href="javascript:;") Find A Hotel
 					span.triangle
-				a(class="language" href="#") English
+				a(class="language" href="javascript:;") English
 					span.triangle
-			.right-side 
-				a(href="#") STORY 
-				a(href="#") EXPERIENCE
+			.menu
+				a(href="javascript:;") STORY 
+				a(href="javascript:;") EXPERIENCE
 				span.icon-member
 				span.icon-cart
 				span.icon-search
+				.circle
+					.inside
+						.square
+						.square
+					.inside
+						.square
+						.square
+			.hamburger
 				.circle
 					.inside
 						.square
@@ -34,94 +44,110 @@ html(lang="en")
 				span Back
 				span New Arrival
 			.wrap 
-				.left-section
+				.photo
 					.product-img
 						img(src="../img/vase.jpg" alt="")
-						.icon-zoom
 					.page
-						p PREV
+						span PREV
 						span NEXT
 						span.page-num 0 / 6
-				.right-section
-					.info
-						.info-favor
+				.info
+					.info-block
+						.favor
 							span.icon-favorite-line
 								span.path1
 								span.path2
 							span Wishlist 
 							span.icon-share
-						.info-content
+						.content
 							span.category Landcape series
 							h1 The Wizard of Oz 
 							p.info-cpntent-text Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi 
 							p.info-member-price Member price
 							p.info-content-price NT $44,900
 								span NT $45,900
-						.info-size 
-							.info-size-color 
-								img(src="../img/color-green.jpg" alt="")
-								img(src="../img/color-blue.jpg" alt="")
-								img(src="../img/color-purple.jpg" alt="")
-								img(src="../img/color-red.jpg" alt="")
-							.info-size-group 
-								div S
+						.color-size 
+							.color 
+								div
+									img(src="../img/color-green.jpg" alt="" class="active")
+								div
+									img(src="../img/color-blue.jpg" alt="")
+								div
+									img(src="../img/color-purple.jpg" alt="")
+								div
+									img(src="../img/color-red.jpg" alt="")
+							.size
+								.active S
 								div M
 								div L
 								div XL
-						.info-count 
+						.count-block 
 							p Quantity
-							.info-count-group
-								.count-btn
+							.count
+								.btn
 									.icon-less
-								.count-num 1
-								.count-btn
+								.num 1
+								.btn
 									.icon-plus
 						.info-btn 
-							a(href="#") Gift Service
-							a(href="#") ADD TO CART
-						.info-more-accordion
-							.accrofion-group.promotions
-								div 
-									.icon-tag
-									p Promotions 
-								div
-									.icon-cross
-							.accrofion-group 
-								div 
-									p Delivary Restrictions 
-								div
-									.icon-cross
-							.accrofion-group
-								div 
-									p Precautions
-								div
-									.icon-cross
+							a(href="javascript:;") Gift Service
+							a(href="javascript:;") ADD TO CART
+						.accordion-block
+							.accordion.promotions
+								.title
+									div 
+										.icon-tag
+										p Promotions 
+									div
+										.icon-cross
+								.collapse 
+									p Free shipping for orders over NT $3000
+									a(href="javascript:;") 
+							.accordion
+								.title
+									div 
+										p Delivary Restrictions 
+									div
+										.icon-cross
+								.collapse 
+									p At this stage, we are unable to ship the products to the followingcountries: New Zealand, Romania, South Africa, Sri Lanka, Turkey, Turks and Caicos Islands. For individual guidance on where the fragrances ship to, please email our Customer Care team:
+									p service@thelalu.com
+							.accordion
+								.title
+									div 
+										p Precautions
+									div
+										.icon-cross
+								.collapse 
+									ul 
+										li
+											p This product is purely handmade and retains the texture of the hand. Those who accept it can place an order.
+										li 
+											p Some products may have a slight drop due to the firingprocess, environment and other factors, which is normal.
 			.article
-				.article-menu
+				.menu
 					p  Introduction  
-					//- span
 					p  Specification 
-					//- span
 					p Related Products
 				.intro 
-					.intro-header
+					.title
 						h2 Introduction
 						p Lorem ipsum dolor sit amet.
-					.intro-body
+					.content
 						img(src="../img/intro-img.jpg" alt="")
-						.intro-body-content
+						.txt
 							h3 Create a beautiful in your house 
 							br
 							p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse magni sint nam reprehenderit aut accusantium, quisquam eius veritatis? Nam ullam quibusdam veritatis necessitatibus quos fugit obcaecati nesciunt et assumenda repellendus!
 							br
-							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae est, nemo quaerat sint dolor, distinctio similique quos quod eligendi cum non quibusdam tempora laudantium laborum sequi molestiae iusto? Tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laudantium culpa eos quo amet laboriosam tenetur sit molestiae sequi. Neque. Lorem, ipsum dolor. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, sapiente.
-					.intro-footer 
+							p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae est, nemo quaerat sint dolor, distinctio similique quos quod eligendi cum non quibusdam tempora laudantium laborum sequi molestiae iusto? Tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis laudantium 
+					.txt-footer
 						br
 						p Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit doloremque voluptate vel quod? Corrupti quibusdam magnam iure voluptatum consectetur rerum hic atque ducimus sunt eum a enim tempora fugiat saepe est facilis suscipit, nam minima nulla quidem repudiandae necessitatibus commodi laboriosam modi! Similique earum laborum vitae tempora error officiis, consequatur, fuga expedita, voluptatum sequi mollitia iure doloribus iste aut praesentium quaerat impedit. Et pariatur eaque omnis, numquam consectetur, nemo odio esse atque mollitia cumque dolorem asperiores eos cum dolores. A delectus tenetur ad repellat eligendi sapiente nesciunt odit! Rerum quod.
 						br
 						p lorem sit amet consectetur adipisicing elit. Fuga labore distinctio nam tenetur ad, libero officiis vitae nesciunt blanditiis autem enim, dicta ratione, quasi mollitia nisi aut ipsa atque voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, temporibus.
-					.intro-poster
-						.background-img
+					.poster
+						.background-pic
 							.txt-wrap
 								h3 Life style creation 
 								br
@@ -130,9 +156,9 @@ html(lang="en")
 								br
 								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, reiciendis. Cumque dolores, quo molestiae delectus tempore, voluptas aspernatur veritatis dignissimos itaque rem nemo nobis. Voluptates tenetur mollitia expedita quas dolorem!
 								br
-								a(href="#") Find more 
+								a(href="javascript:;") Find more 
 				.specification
-					.specification-wrap
+					.content
 						h2 Specification
 						p Lorem ipsum dolor sit amet.
 						.list
@@ -148,96 +174,101 @@ html(lang="en")
 							div
 								p.title Material
 								p Ceramics
-		.carousel
-			.prev PREV
-			.next NEXT
-			.title 
-				h2 You may also like
-				p Related products 
-			.row 
-				.col 
-					img(src="../img/pic1.jpg" alt="")
-					p Home Essentials 
-					h4.info Rose Salt Lamp
-					.price-block 
-						.price
+		.carousel 
+			.swiper.mySwiper
+				.swiper-wrapper
+					.swiper-slide
+						img(src="../img/pic1.jpg" alt="")
+						p Home Essentials 
+						h4.info Rose Salt Lamp
+						.price-block 
 							.icon-tag
-							span NT: 29,500
-						.icon-cart
-				.col 
-					img(src="../img/pic2.jpg" alt="")
-					p Home Essentials 
-					h4.info Zebra Puzzle Clocl
-					.price-block 
-						.price
+							.price
+								span NT 29,500
+							.icon-cart
+					.swiper-slide
+						img(src="../img/pic2.jpg" alt="")
+						p Home Essentials 
+						h4.info Rose Salt Lamp
+						.price-block 
 							.icon-tag
-							span NT: 29,500
-						.icon-cart
-				.col 
-					img(src="../img/pic3.jpg" alt="")
-					p Home Essentials 
-					h4.info Tea Ceremony
-					.price-block 
-						.price
+							.price
+								span NT 45,900
+								span NT 24,500
+							.icon-cart
+					.swiper-slide
+						img(src="../img/pic3.jpg" alt="")
+						p Home Essentials 
+						h4.info Rose Salt Lamp
+						.price-block 
 							.icon-tag
-							span NT: 29,500
-						.icon-cart
-				.col 
-					img(src="../img/pic4.jpg" alt="")
-					p Home Essentials 
-					h4.info Hand Coffee Maker
-					.price-block 
-						.price
+							.price
+								span NT 45,900
+								span NT: 29,500
+							.icon-cart
+					.swiper-slide
+						img(src="../img/pic4.jpg" alt="")
+						p Home Essentials 
+						h4.info Rose Salt Lamp
+						.price-block 
 							.icon-tag
-							span NT: 29,500
-						.icon-cart
+							.price
+								span NT: 29,500
+							.icon-cart
+			.swiper-button-next
+				span
+				p next
+			.swiper-button-prev
+				span
+				p prev
+		</div>
 		.footer
 			.menu 
 				ul 
 					li
-						a(href="#") EXERIENCE  
+						a(href="javascript:;") EXERIENCE  
 					li
-						a(href="#") BOOKING  
+						a(href="javascript:;") BOOKING  
 					li
-						a(href="#") SHOPPING  
+						a(href="javascript:;") SHOPPING  
 					li
-						a(href="#") VIP  
+						a(href="javascript:;") VIP  
 					li
-						a(href="#") CONTACT  
+						a(href="javascript:;") CONTACT  
 					li
-						a(href="#") FAQ  
+						a(href="javascript:;") FAQ  
 			.others
 				ul 
 					li 
-						a(href="#") Gift Card 
+						a(href="javascript:;") Gift Card 
 					li 
-						a(href="#") VIP Service
+						a(href="javascript:;") VIP Service
 					li 
-						a(href="#") Shopping Service 
+						a(href="javascript:;") Shopping Service 
 					li 
-						a(href="#") Payment Options
+						a(href="javascript:;") Payment Options
 					li 
-						a(href="#") Returns & Exchanges
+						a(href="javascript:;") Returns & Exchanges
 			.bottom
 				.icon-block 
 					.link
 						ul 
 							li 
-								a(href="#") Copyright 
+								a(href="javascript:;") Copyright 
 							li 
-								a(href="#") Privacy Policy
+								a(href="javascript:;") Privacy Policy
 							li 
-								a(href="#") Production
+								a(href="javascript:;") Production
 					.icon
-						a(href="#").icon-wechat
-						a(href="#").icon-line 
-						a(href="#").icon-youtube-square
-						a(href="#").icon-facebook
-						a(href="#").icon-instagram
-						a(href="#").icon-twitter 
+						a(href="javascript:;").icon-wechat
+						a(href="javascript:;").icon-line 
+						a(href="javascript:;").icon-youtube-dark
+						a(href="javascript:;").icon-facebook
+						a(href="javascript:;").icon-instagram
+						a(href="javascript:;").icon-twitter 
 				.contact
 					p Email assress...
-					a(href="#") SUBSCRIBE
+					a(href="javascript:;") SUBSCRIBE
 				.copyright
 					div
 						p COPYRIGHT ©THE LALU HOTEL,LTD.
@@ -247,3 +278,8 @@ html(lang="en")
 					span 
 					p TOP
 
+
+
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js' integrity='sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==' crossorigin='anonymous')
+	script(src="https://unpkg.com/swiper@8/swiper-bundle.min.js")
+	script(src="../dist/index.js")
