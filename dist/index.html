@@ -50,9 +50,9 @@
             <div class="favor"><span class="icon-favorite-line"><span class="path1"></span><span class="path2"></span></span><span>Wishlist </span><span class="icon-share"></span></div>
             <div class="content"><span class="category">Landcape series</span>
               <h1>The Wizard of Oz </h1>
-              <p class="info-cpntent-text">Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi </p>
-              <p class="info-member-price">Member price</p>
-              <p class="info-content-price">NT $44,900<span>NT $45,900</span></p>
+              <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi </p>
+              <p class="member-price">Member price</p>
+              <p class="price">NT $44,900<span>NT $45,900</span></p>
             </div>
             <div class="color-size"> 
               <div class="color"> 
@@ -88,9 +88,7 @@
                     <div class="icon-tag"></div>
                     <p>Promotions </p>
                   </div>
-                  <div>
-                    <div class="icon-cross"></div>
-                  </div>
+                  <div><span> </span></div>
                 </div>
                 <div class="collapse"> 
                   <p>Free shipping for orders over NT $3000</p><a href="javascript:;"> </a>
@@ -101,9 +99,7 @@
                   <div> 
                     <p>Delivary Restrictions </p>
                   </div>
-                  <div>
-                    <div class="icon-cross"></div>
-                  </div>
+                  <div><span></span></div>
                 </div>
                 <div class="collapse"> 
                   <p>At this stage, we are unable to ship the products to the followingcountries: New Zealand, Romania, South Africa, Sri Lanka, Turkey, Turks and Caicos Islands. For individual guidance on where the fragrances ship to, please email our Customer Care team:</p>
@@ -115,9 +111,7 @@
                   <div> 
                     <p>Precautions</p>
                   </div>
-                  <div>
-                    <div class="icon-cross"></div>
-                  </div>
+                  <div><span></span></div>
                 </div>
                 <div class="collapse"> 
                   <ul> 
@@ -135,12 +129,12 @@
         </div>
       </div>
       <div class="article">
-        <div class="menu">
-          <p> Introduction  </p>
-          <p> Specification </p>
-          <p>Related Products</p>
+        <div class="menu" id="int">
+          <p data-name="int"> Introduction  </p>
+          <p data-name="spe"> Specification </p>
+          <p data-name="rel">Related Products</p>
         </div>
-        <div class="intro"> 
+        <div class="intro">
           <div class="title">
             <h2>Introduction</h2>
             <p>Lorem ipsum dolor sit amet.</p>
@@ -167,7 +161,7 @@
             </div>
           </div>
         </div>
-        <div class="specification">
+        <div class="specification" id="spe">
           <div class="content">
             <h2>Specification</h2>
             <p>Lorem ipsum dolor sit amet.</p>
@@ -193,7 +187,9 @@
         </div>
       </div>
     </div>
-    <div class="carousel"> 
+    <div class="carousel" id="rel">
+      <h2>You may also like...</h2>
+      <p>Related products</p>
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="../img/pic1.jpg" alt="">
@@ -210,7 +206,7 @@
             <h4 class="info">Rose Salt Lamp</h4>
             <div class="price-block"> 
               <div class="icon-tag"></div>
-              <div class="price"><span>NT 45,900</span><span>NT 24,500</span></div>
+              <div class="price"><span>NT 45,900</span><span>NT 44,500</span></div>
               <div class="icon-cart"></div>
             </div>
           </div>
@@ -219,7 +215,7 @@
             <h4 class="info">Rose Salt Lamp</h4>
             <div class="price-block"> 
               <div class="icon-tag"></div>
-              <div class="price"><span>NT 45,900</span><span>NT: 29,500</span></div>
+              <div class="price"><span>NT 45,900</span><span>NT: 44,500</span></div>
               <div class="icon-cart"></div>
             </div>
           </div>
@@ -282,8 +278,9 @@
           </div>
         </div>
       </div>
-      <div class="top-scroll">
-        <div><span> </span>
+      <div class="go-top">
+        <div><span> </span></div>
+        <div>
           <p>TOP</p>
         </div>
       </div>

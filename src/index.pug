@@ -62,9 +62,9 @@ html(lang="en")
 						.content
 							span.category Landcape series
 							h1 The Wizard of Oz 
-							p.info-cpntent-text Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi 
-							p.info-member-price Member price
-							p.info-content-price NT $44,900
+							p.txt Lorem ipsum dolor sit amet consectetur adipisicing 	elit. Expedita, doloremque. Recusandae culpa nam enim 	ipsa. Eum ea eligendi 
+							p.member-price Member price
+							p.price NT $44,900
 								span NT $45,900
 						.color-size 
 							.color 
@@ -99,7 +99,7 @@ html(lang="en")
 										.icon-tag
 										p Promotions 
 									div
-										.icon-cross
+										span 
 								.collapse 
 									p Free shipping for orders over NT $3000
 									a(href="javascript:;") 
@@ -108,7 +108,7 @@ html(lang="en")
 									div 
 										p Delivary Restrictions 
 									div
-										.icon-cross
+										span
 								.collapse 
 									p At this stage, we are unable to ship the products to the followingcountries: New Zealand, Romania, South Africa, Sri Lanka, Turkey, Turks and Caicos Islands. For individual guidance on where the fragrances ship to, please email our Customer Care team:
 									p service@thelalu.com
@@ -117,7 +117,7 @@ html(lang="en")
 									div 
 										p Precautions
 									div
-										.icon-cross
+										span
 								.collapse 
 									ul 
 										li
@@ -125,11 +125,11 @@ html(lang="en")
 										li 
 											p Some products may have a slight drop due to the firingprocess, environment and other factors, which is normal.
 			.article
-				.menu
-					p  Introduction  
-					p  Specification 
-					p Related Products
-				.intro 
+				.menu#int
+					p(data-name="int")  Introduction  
+					p(data-name="spe")  Specification 
+					p(data-name="rel") Related Products
+				.intro
 					.title
 						h2 Introduction
 						p Lorem ipsum dolor sit amet.
@@ -157,7 +157,7 @@ html(lang="en")
 								p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fuga, reiciendis. Cumque dolores, quo molestiae delectus tempore, voluptas aspernatur veritatis dignissimos itaque rem nemo nobis. Voluptates tenetur mollitia expedita quas dolorem!
 								br
 								a(href="javascript:;") Find more 
-				.specification
+				.specification#spe
 					.content
 						h2 Specification
 						p Lorem ipsum dolor sit amet.
@@ -174,7 +174,9 @@ html(lang="en")
 							div
 								p.title Material
 								p Ceramics
-		.carousel 
+		.carousel#rel
+			h2 You may also like...
+			p Related products
 			.swiper.mySwiper
 				.swiper-wrapper
 					.swiper-slide
@@ -194,7 +196,7 @@ html(lang="en")
 							.icon-tag
 							.price
 								span NT 45,900
-								span NT 24,500
+								span NT 44,500
 							.icon-cart
 					.swiper-slide
 						img(src="../img/pic3.jpg" alt="")
@@ -204,7 +206,7 @@ html(lang="en")
 							.icon-tag
 							.price
 								span NT 45,900
-								span NT: 29,500
+								span NT: 44,500
 							.icon-cart
 					.swiper-slide
 						img(src="../img/pic4.jpg" alt="")
@@ -273,9 +275,10 @@ html(lang="en")
 					div
 						p COPYRIGHT ©THE LALU HOTEL,LTD.
 						P ALL RIGHTS RESERVED. DESIGNED BY WDD.
-			.top-scroll
+			.go-top
 				div
 					span 
+				div
 					p TOP
 
 
